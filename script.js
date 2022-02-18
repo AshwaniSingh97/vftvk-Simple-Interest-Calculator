@@ -1,6 +1,11 @@
 function compute()
 {
     var principal = document.getElementById("principal").value;
+    if(principal.value < 1){
+        alert("Amount has to be a positive quantity")
+        principal.focus()
+        return
+    }
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
     var interest = principal * years * rate /100;
